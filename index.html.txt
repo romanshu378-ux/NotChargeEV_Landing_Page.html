@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotChargeEV - The Future of Electric Driving in India</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the futuristic/electric theme */
+        :root {
+            --primary-color: #0c4a6e; /* Deep Cyan/Blue */
+            --accent-color: #06b6d4; /* Vibrant Cyan */
+            --background-color: #030712; /* Deep Dark Blue/Black */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: #f3f4f6;
+        }
+        .text-neon {
+            color: var(--accent-color);
+            /* Subtly reduced text shadow for modern look */
+            text-shadow: 0 0 3px var(--accent-color), 0 0 6px var(--accent-color);
+        }
+        .bg-gradient-electric {
+            background: linear-gradient(135deg, #0f172a 0%, #171d3a 100%);
+        }
+        /* CTA Button: No shadow, plain, fast transition */
+        .cta-button {
+            transition: all 0.2s ease;
+        }
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+        /* ICard Modal Styles (Chatbot size) */
+        .icard-modal {
+            max-width: 380px; /* Narrower, chatbot-like width */
+            width: 90%;
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-background-color/95 backdrop-blur-sm shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="text-2xl font-extrabold text-neon tracking-tight">
+                NotChargeEV
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#hero" class="text-gray-300 hover:text-accent-color transition duration-150">Home</a>
+                <a href="#problem" class="text-gray-300 hover:text-accent-color transition duration-150">The Problem</a>
+                <a href="#technology" class="text-gray-300 hover:text-accent-color transition duration-150">Technology</a>
+                <a href="#team" class="text-gray-300 hover:text-accent-color transition duration-150">Our Team</a>
+                <a href="#preorder" class="text-gray-300 hover:text-accent-color transition duration-150">Pre-Order</a>
+            </div>
+            <a href="#preorder" class="hidden md:block px-4 py-1.5 text-sm font-medium bg-accent-color text-black rounded-full cta-button">
+                Register Now
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-background-color/90">
+            <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Home</a>
+            <a href="#problem" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">The Problem</a>
+            <a href="#technology" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Technology</a>
+            <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Our Team</a>
+            <a href="#preorder" class="block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-accent-color text-black cta-button">Register Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section: Vision & Mission -->
+        <section id="hero" class="py-20 md:py-32 lg:py-40 text-center bg-background-color relative overflow-hidden border-b border-gray-900">
+            <div class="max-w-5xl mx-auto px-4 relative z-10">
+                <p class="text-lg uppercase tracking-widest text-gray-500 mb-4">The Future of Electric Driving</p>
+                <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-6">
+                    <span class="text-neon block">NotChargeEV:</span>
+                    <span class="block mt-2 text-gray-100">India's First, Auto-Recharge EV</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto">
+                    Vision: To build affordable, high-performance electric vehicles for a sustainable future in India.
+                    <br class="hidden sm:block">
+                    Mission: Design, develop, and deliver smart electric cars with Indian innovation and global standards.
+                </p>
+                <!-- CTA Buttons Block (Now only one button) -->
+                <div class="flex justify-center">
+                    <!-- Main CTA -->
+                      <a href="#preorder" class="px-10 py-3.5 text-xl font-semibold bg-transparent text-white border-2 border-accent-color rounded-xl cta-button inline-flex items-center hover:bg-accent-color/10">
+                        Join the Revolution
+                        <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L14.25 7m-4.5 10L14.25 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="py-16 md:py-24 bg-gradient-electric border-b border-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Today's <span class="text-neon">Challenges</span> and Our Goal</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Problem 1: Fuel & Pollution -->
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800">
+                        <div class="text-4xl text-red-500 mb-4">⛽</div>
+                        <h3 class="text-xl font-semibold mb-3">Rising Fuel Prices and Pollution</h3>
+                        <p class="text-gray-400">Rising fuel prices make travel expensive, while petrol/diesel vehicles cause major air pollution and health issues.</p>
+                    </div>
+                    
+                    <!-- Problem 2: High EV Cost -->
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800">
+                        <div class="text-4xl text-yellow-400 mb-4">💰</div>
+                        <h3 class="text-xl font-semibold mb-3">Expensive EV Costs</h3>
+                        <p class="text-gray-400">Most good-range EVs are too costly, creating a significant barrier for the middle class.</p>
+                    </div>
+
+                    <!-- Problem 3: Imported Parts -->
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800">
+                        <div class="text-4xl text-green-400 mb-4">🇮🇳</div>
+                        <h3 class="text-xl font-semibold mb-3">Dependence on Imports (Make in India)</h3>
+                        <p class="text-gray-400">India relies heavily on imported components. NotChargeEV focuses on 100% Indian design and production.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution/Offerings Section (Simplified) -->
+        <section class="py-16 md:py-24">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Our <span class="text-neon">Solution</span></h2>
+                <p class="text-xl text-gray-400 mb-10 max-w-3xl mx-auto">
+                    NotChargeEV eliminates range anxiety with an auto-recharge capability and delivers premium features at an affordable cost.
+                </p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Feature 1: Price -->
+                    <div class="p-4 rounded-xl bg-gray-900 border border-accent-color/50">
+                        <p class="text-5xl font-extrabold text-neon">₹10-15</p>
+                        <p class="text-gray-400">Lakh (Expected Price)</p>
+                    </div>
+                    <!-- Feature 2: Range -->
+                    <div class="p-4 rounded-xl bg-gray-900 border border-accent-color/50">
+                        <p class="text-5xl font-extrabold text-neon">∞</p>
+                        <p class="text-gray-400">Unlimited Range</p>
+                    </div>
+                    <!-- Feature 3: Manufacturing -->
+                    <div class="p-4 rounded-xl bg-gray-900 border border-accent-color/50">
+                        <p class="text-5xl font-extrabold text-neon">🇮🇳</p>
+                        <p class="text-gray-400">Made in India</p>
+                    </div>
+                    <!-- Feature 4: Battery -->
+                    <div class="p-4 rounded-xl bg-gray-900 border border-accent-color/50">
+                        <p class="text-5xl font-extrabold text-neon">LFP</p>
+                        <p class="text-gray-400">High-Performance Battery</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Technology Deep Dive Section (Simplified) -->
+        <section id="technology" class="py-16 md:py-24 bg-gradient-electric border-t border-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Our <span class="text-neon">Revolutionary Technology</span></h2>
+                <p class="text-center text-gray-400 text-xl mb-12">
+                    Automatic Recharge While Driving: Eliminating the plug-in wait.
+                </p>
+                
+                <!-- Diagram Placeholder for the self-charging system -->
+                <div class="max-w-4xl mx-auto mb-12">
+                    [Image of Schematic Diagram of a Self-Charging EV Alternator System]
+                </div>
+                <!-- End Diagram Placeholder -->
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    
+                    <div class="space-y-8">
+                        <!-- Tech Point 1: Advanced Alternator -->
+                        <div class="flex items-start bg-gray-900 p-6 rounded-xl border border-gray-800">
+                            <div class="flex-shrink-0 text-3xl text-accent-color mr-4">⚙️</div>
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-2">Advanced Alternator (Self-Charging System)</h3>
+                                <p class="text-gray-400">Continuously generates electricity while the vehicle is in motion, eliminating the need for traditional plug-in charging.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Tech Point 2: Efficient Power Management -->
+                        <div class="flex items-start bg-gray-900 p-6 rounded-xl border border-gray-800">
+                            <div class="flex-shrink-0 text-3xl text-accent-color mr-4">🔋</div>
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-2">Efficient Power Management</h3>
+                                <p class="text-gray-400">Optimizes energy flow to ensure maximum driving range and performance.</p>
+                            </div>
+                        </div>
+
+                        <!-- Tech Point 3: Smart Charging System -->
+                        <div class="flex items-start bg-gray-900 p-6 rounded-xl border border-gray-800">
+                            <div class="flex-shrink-0 text-3xl text-accent-color mr-4">🧠</div>
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-2">Smart Charging System</h3>
+                                <p class="text-gray-400">Automatically adjusts charging levels based on driving conditions for optimal battery health.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technology Use Case / IoT Image Placeholder -->
+                    <div class="p-8 bg-gray-950 rounded-xl border border-gray-700 h-full flex flex-col justify-center items-center min-h-[400px]">
+                        <h3 class="text-2xl font-bold text-neon mb-4">IoT and AI Integration</h3>
+                        <p class="text-center text-gray-400 mb-6">
+                            Mobile app for real-time monitoring and AI/ML-based driving behavior adaptation.
+                        </p>
+                        <div class="text-6xl">📱🤖</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Section (UPDATED to use JS for rendering and click handler) -->
+        <section id="team" class="py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-12">Our <span class="text-neon">Expert Team</span></h2>
+
+                <div id="team-container" class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <!-- Team members will be injected here by JavaScript -->
+                </div>
+                
+                <p class="mt-10 text-gray-500 text-sm">Current Stage: R&D completed, prototype design ready, battery testing ongoing.</p>
+            </div>
+        </section>
+
+
+        <!-- Pre-Order / CTA Form Section -->
+        <section id="preorder" class="py-16 md:py-24 bg-gray-950 border-t border-accent-color/20">
+            <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">
+                    Register for Your <span class="text-neon">NotChargeEV</span>
+                </h2>
+                <p class="text-center text-gray-400 mb-10">
+                    Sign up for the exclusive early access program and receive launch updates for this affordable, auto-recharge EV priced in the ₹10-15 lakh range.
+                </p>
+
+                <!-- Form Section -->
+                <form class="space-y-6 bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name"
+                               class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:border-accent-color focus:ring-1 focus:ring-accent-color outline-none" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com"
+                               class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:border-accent-color focus:ring-1 focus:ring-accent-color outline-none" required>
+                    </div>
+                    <div>
+                        <label for="city" class="block text-sm font-medium text-gray-300 mb-2">City</label>
+                        <input type="text" id="city" name="city" placeholder="City where you want the EV"
+                               class="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:border-accent-color focus:ring-1 focus:ring-accent-color outline-none">
+                    </div>
+                    
+                    <!-- NEW BOX WRAPPER around the button -->
+                    <div class="p-0.5 rounded-xl bg-gradient-to-r from-accent-color to-cyan-400 shadow-2xl shadow-accent-color/50 transform transition duration-300 hover:scale-[1.01]">
+                        <button type="submit" class="w-full px-4 py-3 text-lg font-semibold bg-gray-900 text-accent-color rounded-xl cta-button hover:bg-gray-800">
+                            Join the Pre-Order List
+                        </button>
+                    </div>
+                    <!-- END NEW BOX WRAPPER -->
+                    
+                    <p id="submission-message" class="text-center text-sm text-green-400 hidden mt-4">
+                        Thank you! Your interest has been registered.
+                    </p>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-color py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <div class="text-2xl font-extrabold text-neon tracking-tight mb-4">
+                NotChargeEV
+            </div>
+            <p class="mb-4">
+                Redefining the future of electric mobility.
+            </p>
+            
+            <div class="flex justify-center space-x-6 mb-8 text-sm">
+                <a href="#hero" class="hover:text-accent-color">Home</a>
+                <a href="#" class="hover:text-accent-color">Careers</a>
+                <a href="#" class="hover:text-accent-color">Privacy Policy</a>
+                <a href="mailto:info@notchargeev.com" class="hover:text-accent-color">Contact Us</a>
+            </div>
+
+            <p class="text-xs">&copy; 2024 NotChargeEV, Inc. All rights reserved. Made in India.</p>
+        </div>
+    </footer>
+
+    <!-- PROFILE ICard MODAL (Chatbot/Narrow Size) -->
+    <div id="profile-modal" class="fixed inset-0 modal-overlay flex items-center justify-center z-[100] opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeProfileModal()">
+        <div id="modal-content" class="icard-modal bg-gray-900 rounded-2xl shadow-2xl border border-gray-700 p-6 relative transform translate-y-4" onclick="event.stopPropagation()">
+            
+            <!-- Close Button (Icon) -->
+            <button onclick="closeProfileModal()" class="absolute top-4 right-4 text-gray-400 hover:text-accent-color transition duration-150">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="flex flex-col items-center pt-4 pb-2">
+                
+                <!-- Profile Image/Placeholder -->
+                <img id="modal-image" 
+                    src="" 
+                    alt="Team Member Profile" 
+                    class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-accent-color shadow-lg"
+                    onerror="this.onerror=null; this.src='https://placehold.co/96x96/030712/06b6d4?text='+this.getAttribute('data-initials')">
+
+                <!-- ICard Details -->
+                <div class="text-center w-full">
+                    <h2 id="modal-name" class="text-3xl font-extrabold text-white mb-1"></h2>
+                    <p id="modal-role" class="text-lg text-accent-color font-semibold mb-4"></p>
+                    
+                    <div class="bg-gray-950 p-4 rounded-xl border border-gray-800 text-left">
+                        <p class="text-sm font-bold text-gray-400 mb-1">Introduction (Bio):</p>
+                        <p id="modal-bio" class="text-base text-gray-300 italic mb-4"></p>
+
+                        <div class="flex items-center text-sm text-gray-400">
+                            <svg class="w-4 h-4 mr-2 text-accent-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path></svg>
+                            <a id="modal-email" href="" class="text-gray-300 hover:text-accent-color transition duration-150 break-all"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Close Button (Styled like CTA) -->
+            <button onclick="closeProfileModal()" 
+                    class="w-full mt-6 px-6 py-2.5 text-base font-semibold bg-transparent text-white border-2 border-accent-color rounded-xl cta-button inline-flex items-center justify-center hover:bg-accent-color/10">
+                Close Profile
+                <!-- Using a circle-x icon for closing/exit -->
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Mobile Menu, Mock Form Submission, and Team Modal -->
+    <script>
+        // Team Data
+        const teamMembers = [
+            { id: 1, name: "Romanshu Sharma", role: "Founder & CEO", initials: "R.S.", email: "romanshu.s@notchargeev.com", bio: "Romanshu provides the vision and leadership for the company. Holds deep expertise in EV technology and the Indian market." },
+            { id: 2, name: "Khushbu Sharma", role: "Co-Founder & CTO", initials: "K.S.", email: "khushbu.s@notchargeev.com", bio: "Khushbu manages technical strategy, prototype development, and the patented alternator system." },
+            { id: 3, name: "Sakshi Verma", role: "Project Manager", initials: "S.V.", email: "sakshi.v@notchargeev.com", bio: "Sakshi coordinates all R&D and production phases, ensuring the project is completed on schedule." },
+        ];
+        
+        // Function to open the profile modal
+        function openProfileModal(memberId) {
+            const member = teamMembers.find(m => m.id === memberId);
+            if (!member) return;
+
+            const modal = document.getElementById('profile-modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalImage = document.getElementById('modal-image');
+
+            // Populate Modal Data
+            document.getElementById('modal-name').textContent = member.name;
+            document.getElementById('modal-role').textContent = member.role;
+            document.getElementById('modal-bio').textContent = member.bio;
+            
+            const emailLink = document.getElementById('modal-email');
+            emailLink.textContent = member.email;
+            emailLink.href = `mailto:${member.email}`;
+            
+            // Set image source and initials for fallback
+            modalImage.src = `https://placehold.co/96x96/030712/06b6d4?text=${member.initials.replace('.', '').replace('.', '')}`;
+            modalImage.setAttribute('data-initials', member.initials.replace('.', '').replace('.', ''));
+            
+            // Show Modal with transition
+            modal.classList.remove('pointer-events-none');
+            modal.classList.add('opacity-100');
+            modalContent.classList.remove('translate-y-4');
+        }
+
+        // Function to close the profile modal
+        function closeProfileModal() {
+            const modal = document.getElementById('profile-modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            modal.classList.remove('opacity-100');
+            modalContent.classList.add('translate-y-4');
+
+            // Wait for transition to complete before disabling pointer events
+            setTimeout(() => {
+                modal.classList.add('pointer-events-none');
+            }, 300);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const form = document.querySelector('form');
+            const submissionMessage = document.getElementById('submission-message');
+            const teamContainer = document.getElementById('team-container');
+            
+            // Expose modal functions globally since they are called from inline HTML
+            window.openProfileModal = openProfileModal;
+            window.closeProfileModal = closeProfileModal;
+
+            // 1. Render Team Cards Dynamically
+            teamMembers.forEach(member => {
+                const cardHtml = `
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 transition duration-300 transform hover:scale-[1.03] cursor-pointer" onclick="openProfileModal(${member.id})">
+                        <img src="https://placehold.co/96x96/0f172a/06b6d4?text=${member.initials.replace('.', '').replace('.', '')}" 
+                            alt="Profile photo of ${member.name}" 
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-2 border-accent-color/50"
+                            onerror="this.onerror=null; this.src='https://placehold.co/96x96/0f172a/06b6d4?text=${member.initials.replace('.', '').replace('.', '')}'">
+                        <h3 class="text-xl font-semibold text-white">${member.name}</h3>
+                        <p class="text-accent-color">${member.role}</p>
+                        <p class="text-sm text-gray-400 mt-2">Full-time</p>
+                    </div>
+                `;
+                teamContainer.innerHTML += cardHtml;
+            });
+
+
+            // 2. Mobile Menu Toggle
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 3. Mock Form Submission
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const submitButton = form.querySelector('button[type="submit"]');
+
+                // Simulate API call/processing time
+                submitButton.textContent = 'Processing...';
+                submitButton.disabled = true;
+                
+                setTimeout(() => {
+                    // Reset form and show success message
+                    document.getElementById('name').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('city').value = '';
+
+                    submitButton.textContent = 'Join the Pre-Order List';
+                    submitButton.disabled = false;
+                    
+                    submissionMessage.classList.remove('hidden');
+                    
+                    // Hide message after a few seconds
+                    setTimeout(() => {
+                        submissionMessage.classList.add('hidden');
+                    }, 5000);
+
+                }, 1500); // 1.5 second delay
+            });
+        });
+    </script>
+</body>
+</html>
